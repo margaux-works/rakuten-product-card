@@ -16,5 +16,6 @@
     "noEmit": true,
     "skipLibCheck": true,
     "types": ["jest", "@testing-library/jest-dom"]
-  }
+  },
+  "exclude": ["node_modules", "dist", "src/tests"] // Excludes from build
 }
