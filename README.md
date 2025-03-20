@@ -1,6 +1,6 @@
 # Rakuten Product Card
 
-This project is a **React-based product card component** built as part of a **technical test for an internship application**.
+This project is a **React-based product card component** built as part of a **technical test for an front-end developer application**.
 
 The goal was to implement a product card UI according to a given design, using **Vite, React, TypeScript, and Material UI** while ensuring responsiveness and code quality.
 
@@ -29,10 +29,11 @@ This component displays product details dynamically by fetching mock product dat
 - any CSS solution or component library can be used. At Rakuten, we base many of our React components on MUI.
 
 Bonus Point:
-✅ Use TypeScript for the React part.
-✅ Implement a responsive design.
-✅ Ensure that components do not render if data is missing.
-✅ Write tests for the React component.
+
+- ✅ Use TypeScript for the React part.
+- ✅ Implement a responsive design.
+- ✅ Ensure that components do not render if data is missing.
+- ✅ Write tests for the React component.
 
 ## Features
 
