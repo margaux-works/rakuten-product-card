@@ -52,14 +52,21 @@ export const ProductCard = () => {
         component="img"
         src={product.image}
         alt={product.title || 'Product image'}
-        sx={{ width: '100%', height: 'auto', padding: '1rem' }}
+        sx={{
+          width: '120px',
+          height: '120px',
+          padding: '0.75rem',
+        }}
       />
       <CardContent
         sx={{
           display: 'grid',
           gridTemplateRows: 'auto auto auto auto',
-          padding: '1rem',
           gap: 0.5,
+          paddingTop: '12px',
+          paddingLeft: '16px',
+          paddingRight: '16px',
+          paddingBottom: '16px !important',
         }}
       >
         <Typography
@@ -74,6 +81,12 @@ export const ProductCard = () => {
           sx={{
             color: '#333',
             fontWeight: '700',
+            fontSize: '14px',
+            lineHeight: '18px',
+            display: '-webkit-box',
+            WebkitBoxOrient: 'vertical',
+            WebkitLineClamp: 2,
+            overflow: 'hidden',
           }}
         >
           {product.title}
@@ -91,7 +104,10 @@ export const ProductCard = () => {
           <span style={{ fontSize: 14, lineHeight: '18px' }}> Neuf</span>
         </Typography>
         <Typography variant="body2" sx={{ color: '#333' }}>
-          Occasion dès <strong>{product.usedPrice}</strong>
+          Occasion dès{' '}
+          <span style={{ fontWeight: 600, fontSize: 20 }}>
+            {product.usedPrice}
+          </span>
         </Typography>
       </CardContent>
     </Card>

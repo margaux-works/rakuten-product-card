@@ -13,7 +13,7 @@ export default function App() {
         alignItems: 'center',
       }}
     >
-      <Container maxWidth="sm">
+      <Container maxWidth="xs">
         <ProductCard />
       </Container>
     </Box>
