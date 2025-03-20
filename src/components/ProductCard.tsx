@@ -14,10 +14,18 @@ export const ProductCard = () => {
   const [product, setProduct] = useState<Product | null>(null);
 
   useEffect(() => {
-    fetch('/src/data/products.json') // simulate API Call
-      .then((response) => response.json())
+    fetch('/data/products.json') // simulate API Call
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => setProduct(data))
-      .catch(() => setProduct(null)); // if error occurs, component does not render
+      .catch((error) => {
+        console.error('Error fetching product data:', error);
+        setProduct(null); // if error occurs, component does not render
+      });
   }, []);
 
   if (!product) return null;
@@ -29,7 +37,7 @@ export const ProductCard = () => {
       target="_blank"
       rel="noopener noreferrer"
       sx={{
-        width: '343',
+        width: 343,
         boxShadow: 1,
         borderRadius: 2,
         textDecoration: 'none',
@@ -43,7 +51,7 @@ export const ProductCard = () => {
       <Box
         component="img"
         src={product.image}
-        alt={product.title}
+        alt={product.title || 'Product image'}
         sx={{ width: '100%', height: 'auto', padding: '1rem' }}
       />
       <CardContent
