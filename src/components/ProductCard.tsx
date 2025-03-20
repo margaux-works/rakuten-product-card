@@ -37,7 +37,7 @@ export const ProductCard = () => {
       target="_blank"
       rel="noopener noreferrer"
       sx={{
-        width: 343,
+        maxWidth: 343,
         boxShadow: 1,
         borderRadius: 2,
         textDecoration: 'none',
