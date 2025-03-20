@@ -14,7 +14,7 @@ export const ProductCard = () => {
   const [product, setProduct] = useState<Product | null>(null);
 
   useEffect(() => {
-    fetch('/data/products.json') // simulate API Call
+    fetch(`${import.meta.env.BASE_URL}data/products.json`) // simulate API Call with correct path for gh-pages
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
