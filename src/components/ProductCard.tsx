@@ -105,7 +105,7 @@ export const ProductCard = () => {
         >
           {product.newPrice} <span style={{ fontSize: 14 }}> Neuf</span>
         </Typography>
-        <Typography variant="body2" sx={{ color: '#333', lineHeight: '10px' }}>
+        <Typography variant="body2" sx={{ color: '#333', lineHeight: '16px' }}>
           Occasion dès{' '}
           <span style={{ fontWeight: 600, fontSize: 20 }}>
             {product.usedPrice}
