@@ -70,8 +70,12 @@ export const ProductCard = () => {
         }}
       >
         <Typography
-          variant="body2"
-          sx={{ color: '#696969', fontWeight: 'bold' }}
+          sx={{
+            color: '#696969',
+            fontWeight: 'bold',
+            fontSize: '12px',
+            lineHeight: 1,
+          }}
         >
           {product.brand}
         </Typography>
@@ -101,7 +105,7 @@ export const ProductCard = () => {
         >
           {product.newPrice} <span style={{ fontSize: 14 }}> Neuf</span>
         </Typography>
-        <Typography variant="body2" sx={{ color: '#333' }}>
+        <Typography variant="body2" sx={{ color: '#333', lineHeight: '10px' }}>
           Occasion dès{' '}
           <span style={{ fontWeight: 600, fontSize: 20 }}>
             {product.usedPrice}
